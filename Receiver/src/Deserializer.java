@@ -25,23 +25,14 @@ public class Deserializer
 			{
 				Class objClass = Class.forName(e.getAttributeValue("class"));
 				obj = objClass.newInstance();
-//				if (objClass.isArray())
-//				{
-//					obj = Array.newInstance(objClass.getComponentType(), Integer.parseInt(e.getAttributeValue("length")));
-//					List<Element> values = e.getChildren("value");
-//					for (int i = 0; i < Array.getLength(obj); i++) Array.set(obj, i, Integer.parseInt(values.get(i).getText()));
-//				}
-//				else
-//				{
-					List<Element> fields = e.getChildren("field");
-					for (Element f : fields)
-					{
-						Field field = objClass.getDeclaredField(f.getAttributeValue("name"));
-						if (field.getType() == int.class) field.set(obj, Integer.parseInt(f.getChildText("value")));
-						if (field.getType() == double.class) field.set(obj, Double.parseDouble(f.getChildText("value")));
-						if (field.getType() == boolean.class) field.set(obj, Boolean.parseBoolean(f.getChildText("value")));
-					}	
-//				}		
+				List<Element> fields = e.getChildren("field");
+				for (Element f : fields)
+				{
+					Field field = objClass.getDeclaredField(f.getAttributeValue("name"));
+					if (field.getType() == int.class) field.set(obj, Integer.parseInt(f.getChildText("value")));
+					if (field.getType() == double.class) field.set(obj, Double.parseDouble(f.getChildText("value")));
+					if (field.getType() == boolean.class) field.set(obj, Boolean.parseBoolean(f.getChildText("value")));
+				}			
 			}
 		}
 		catch(Exception e)

@@ -1,0 +1,27 @@
+CPSC 501 Assignment #3
+Teresa Van (10149274)
+
+REFACTORINGS:
+
+1. Extract Method:
+  Bad smell: Long Method
+  Extract method was done due to one method being excessively long. (ObjectCreator had one long method, and was separated into smaller methods)
+  commit#: b3c1cdb0f7b7a0ffaa15ee0a148e5b53892e18a2
+
+
+2. Extract Method:
+  Bad smell: Long method
+  Extract method was done due to one method being excessively long. (Serializer had one long method, and was separated into smaller methods)
+  commit#: 7e82b847b3f227333d5ccfbab90ac34e333e3fa8
+
+
+3. Extract Method:
+  Bad smell: Long method
+  Extract method was done again due to another method being very long. (Deserializer had one long method, and was separated into smaller methods)
+  commit#: 77a4b81361af5b4a62259eaacbde47d878829ab
+
+
+4. Rename Variables:
+  Bad smell: Odd variable names
+  Rename variables was done because certain variables were named in such a way that made it unclear what the purpose was for
+  commit#: c0fa173d2414a323a4cf4e56f5587083b8d565dc
