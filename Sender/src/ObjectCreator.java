@@ -28,17 +28,17 @@ public class ObjectCreator
 		
 		if (choice == 1)
 		{			
-			simple = choice1();
+			simple = CreateSimpleObject();
 			return simple;
 		}
 		if (choice == 2)
 		{			
-			objWithRef = choice2();
+			objWithRef = CreateObjectWithReferences();
 			return objWithRef;
 		}
 		if (choice == 3)
 		{			
-			primitivesArray = choice3();
+			primitivesArray = CreatePrimitivesArray();
 			return primitivesArray;
 		}
 		if (choice == 4)
@@ -55,7 +55,7 @@ public class ObjectCreator
 		return null;		
 	}
 	
-	public SimpleObject choice1()
+	public SimpleObject CreateSimpleObject()
 	{
 		simple = new SimpleObject();
 		while (choice != 4)
@@ -88,7 +88,7 @@ public class ObjectCreator
 		return simple;
 	}
 	
-	public ObjectWithReferences choice2()
+	public ObjectWithReferences CreateObjectWithReferences()
 	{
 		objWithRef = new ObjectWithReferences();
 		while (choice != 4)
@@ -121,7 +121,7 @@ public class ObjectCreator
 		return objWithRef;
 	}
 	
-	public PrimitivesArray choice3()
+	public PrimitivesArray CreatePrimitivesArray()
 	{
 		primitivesArray = new PrimitivesArray();
 		while (choice != 2)
