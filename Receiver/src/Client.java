@@ -30,8 +30,7 @@ public class Client
     		Deserializer deserializer = new Deserializer();
     		Object obj = deserializer.deserialize(document);
 
-    		Inspector inspector = new Inspector();
-    		
+    		Inspector inspector = new Inspector();		
     		inspector.inspect(obj, true);
     		
     		client.close();
