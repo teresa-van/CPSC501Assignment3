@@ -15,8 +15,7 @@ public class Deserializer
 	
 	public Object deserialize(Document document)
 	{
-		Object obj = new Object();
-		
+		Object obj = new Object();		
 		try
 		{
 			Element root = document.getRootElement();
